@@ -1,0 +1,44 @@
+<html>
+<head>
+  <style media="screen">
+  .bd
+  {
+    background-color: pink;
+      width: 20%;
+      height: 255px;
+      position: absolute;
+      top: 160px;
+      left: 600px;
+      padding-left: 35px;
+      border: 2px solid black;
+      border-radius: 20px;
+  }
+
+  </style>
+<body>
+<div class="bd">
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Click Here</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+</div>
+</body>
+</html>

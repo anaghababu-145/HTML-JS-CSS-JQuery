@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Console</title>
+  </head>
+  <body>
+
+    <h2>* console.log()</h2>
+    <h2>* console.error()</h2>
+    <h2>* console.warn()</h2>
+    <h2>* console.group()</h2>
+    <h2>* console.groupEnd()</h2>
+    <h2>* console.assert()</h2>
+    <h2>* console.table()</h2>
+    <h2>* debugger</h2>
+    <p id="demo"></p>
+
+    <script>
+      console.log("Welcome to console");
+      console.error("It's an error!!!");
+      console.warn("Warning");
+      console.group();
+      console.info("Console Methods");
+      console.info("- console.log()");
+      console.info("- onsole.error()");
+      console.info("- console.warn()");
+      console.info("- console.group()");
+      console.groupEnd();
+      console.assert(20<5 ,"20 is greater");
+      console.table(["log", "error", "info","table","warn","group"]);
+
+      var x = 15 * 5;
+      debugger;
+      document.getElementById("demo").innerHTML = x;
+
+      try {
+        adddlert("Welcome guest!");
+      }
+      catch(err) {
+        document.getElementById("demo").innerHTML = err.message;
+      }
+
+    </script>
+  </body>
+</html>
